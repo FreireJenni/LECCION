@@ -1,0 +1,20 @@
+@startuml
+
+class Estudiante {
+    Num_matricula: int
+    Nombres: string
+    Genero: string
+    Direccion: string
+    Cedula: string
+}
+class Repositorio_Estudiante{
+  -Lista_Estudiante: Estudiante
+  +crear()
+  +buscar(numero_matricula): seat
+
+}
+
+Persona <|-- Estudiante
+Repositorio_Estudiante  -->CasoUsoEstudiante
+Estudiante *--CasoUsoEstudiante
+@enduml
